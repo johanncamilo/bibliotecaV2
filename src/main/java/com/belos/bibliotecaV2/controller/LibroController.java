@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.belos.bibliotecaV2.dto.LibroDTO;
 import com.belos.bibliotecaV2.model.Libro;
 import com.belos.bibliotecaV2.service.LibroServiceImpl;
 
@@ -36,8 +37,8 @@ public class LibroController {
     }
 
     @PostMapping
-    public ResponseEntity<Libro> createLibro(@RequestBody Libro libro) {
-        Libro insertado = libroService.create(libro);
+    public ResponseEntity<LibroDTO> createLibro(@RequestBody Libro libro) {
+        LibroDTO insertado = new LibroDTO(libroService.create(libro));
 
         return new ResponseEntity<>(insertado, HttpStatus.CREATED);
     }

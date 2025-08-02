@@ -33,3 +33,20 @@ Content-Type: application/json
         "id": 21
     }
 }
+
+###
+
+POST http://localhost:8080/api/libros
+Content-Type: application/json
+
+{
+    "titulo": "Mrs Dalloway",
+    "isbn": "978-0156628709",
+    "anoPublicacion": 1925,
+    "genero": "NOVELA",
+    "autor": {
+        "id": 22
+    }
+}
+###
+

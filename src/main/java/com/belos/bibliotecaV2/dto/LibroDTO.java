@@ -17,7 +17,7 @@ public class LibroDTO {
 
     private Genero genero;
 
-    private AutorDTO autorDTO;
+    private AutorIdDTO autorDTO;
 
     public LibroDTO(Libro libro) {
         this.id = libro.getId();
@@ -25,6 +25,6 @@ public class LibroDTO {
         this.isbn = libro.getIsbn();
         this.anoPublicacion = libro.getAnoPublicacion();
         this.genero = libro.getGenero();
-        this.autorDTO = new AutorDTO(libro.getAutor());
+        this.autorDTO = new AutorIdDTO(libro.getAutor());
     }    
 }
