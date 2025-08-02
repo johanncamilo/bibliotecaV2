@@ -4,12 +4,14 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.belos.bibliotecaV2.model.Libro;
 import com.belos.bibliotecaV2.repo.LibroRepo;
-import com.belos.bibliotecaV2.service.interfaces.LibroServiceIntfc;
+import com.belos.bibliotecaV2.service.interfaces.LibroService;
 
-public class LibroService implements LibroServiceIntfc {
+@Service
+public class LibroServiceImpl implements LibroService {
 
     @Autowired
     private LibroRepo libroRepo;

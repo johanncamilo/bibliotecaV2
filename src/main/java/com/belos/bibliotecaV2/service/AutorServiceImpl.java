@@ -4,12 +4,14 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.belos.bibliotecaV2.model.Autor;
 import com.belos.bibliotecaV2.repo.AutorRepo;
-import com.belos.bibliotecaV2.service.interfaces.AutorServiceIntfc;
+import com.belos.bibliotecaV2.service.interfaces.AutorService;
 
-public class AutorService implements AutorServiceIntfc {
+@Service
+public class AutorServiceImpl implements AutorService {
 
     @Autowired
     private AutorRepo autorRepo;

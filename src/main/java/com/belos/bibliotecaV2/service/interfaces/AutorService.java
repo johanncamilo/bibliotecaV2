@@ -6,7 +6,7 @@ import java.util.Optional;
 // import com.belos.bibliotecaV2.dto.AutorDTO;
 import com.belos.bibliotecaV2.model.Autor;
 
-public interface AutorServiceIntfc {
+public interface AutorService {
     public List<Autor> getAll();
     public Optional<Autor> getById(Integer id);
     public Autor create(Autor autor);

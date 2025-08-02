@@ -5,7 +5,7 @@ import java.util.Optional;
 
 import com.belos.bibliotecaV2.model.Libro;
 
-public interface LibroServiceIntfc {
+public interface LibroService {
     public List<Libro> getAll();
     public Optional<Libro> getById(Integer id);
     public Libro create(Libro libro);

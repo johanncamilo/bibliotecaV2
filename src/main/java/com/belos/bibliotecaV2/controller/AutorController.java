@@ -9,14 +9,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.belos.bibliotecaV2.model.Autor;
-import com.belos.bibliotecaV2.service.AutorService;
+import com.belos.bibliotecaV2.service.AutorServiceImpl;
 
 @RestController
 @RequestMapping("api/autores")
 public class AutorController {
 
     @Autowired
-    private AutorService autorService;
+    private AutorServiceImpl autorService;
 
     @GetMapping
     public ResponseEntity<List<Autor>> getAll() {

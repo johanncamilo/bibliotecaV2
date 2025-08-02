@@ -1,0 +1,94 @@
+GET http://localhost:8080/api/autores
+
+###
+
+GET http://localhost:8080/api/autores/33
+
+###
+
+GET http://localhost:8080/api/autores/dto
+
+###
+
+POST http://localhost:8080/api/autores
+Content-Type: application/json
+
+{
+    "nombre": "Gabriel García Márquez",
+    "nacionalidad": "Colombiano",
+    "fechaNacimiento": "1927-03-06"
+}
+
+###
+
+POST http://localhost:8080/api/autores
+Content-Type: application/json
+
+{
+  "nombre": "JK Rowling",
+  "nacionalidad": "Inglesa",
+  "fechaNacimiento": "1942-08-02"
+}
+
+###
+POST http://localhost:8080/api/autores
+Content-Type: application/json
+
+{
+    "nombre": "Isabel Allende",
+    "nacionalidad": "Chilena",
+    "fechaNacimiento": "1942-08-02"
+}
+
+###
+
+POST http://localhost:8080/api/autores
+Content-Type: application/json
+
+{
+    "nombre": "Jane Austen",
+    "nacionalidad": "Británica",
+    "fechaNacimiento": "1775-12-16"
+}
+
+###
+POST http://localhost:8080/api/autores
+Content-Type: application/json
+
+{
+    "nombre": "Jorge Luis Borges",
+    "nacionalidad": "Argentino",
+    "fechaNacimiento": "1899-08-24"
+}
+
+###
+
+###
+POST http://localhost:8080/api/autores
+Content-Type: application/json
+
+{
+    "nombre": "Virginia Woolf",
+    "nacionalidad": "Británica",
+    "fechaNacimiento": "1882-01-25"
+}
+
+###
+POST http://localhost:8080/api/autores
+Content-Type: application/json
+
+{
+    "nombre": "Haruki Murakami",
+    "nacionalidad": "Japonés",
+    "fechaNacimiento": "1949-01-12"
+}
+
+###
+POST http://localhost:8080/api/autores
+Content-Type: application/json
+
+{
+    "nombre": "Elena Poniatowska",
+    "nacionalidad": "Mexicana",
+    "fechaNacimiento": "1932-08-19"
+}
