@@ -6,7 +6,6 @@ GET http://localhost:8080/api/libros
 GET http://localhost:8080/api/libros/17
 ###
 
-// crea un libro
 POST http://localhost:8080/api/libros
 Content-Type: application/json
 
@@ -26,44 +25,11 @@ POST http://localhost:8080/api/libros
 Content-Type: application/json
 
 {
-    "titulo": "Cien Años de Soledad",
-    "isbn": "978-0307474478",
-    "anoPublicacion": 1967,
-    "genero": "NOVELA",
+    "titulo": "Lord of The Rings",
+    "isbn": "978-0307474479",
+    "anoPublicacion": 1954,
+    "genero": "FANTASIA",
     "autor": {
-        "id": 1
+        "id": 21
     }
 }
-
-###
-
-POST http://localhost:8080/api/libros
-Content-Type: application/json
-
-{
-    "titulo": "Cien Años de Soledad",
-    "isbn": "978-0307474478",
-    "anoPublicacion": 1967,
-    "genero": "NOVELA",
-    "autor": {
-        "nombre": "Gabriel García Márquez",
-        "nacionalidad": "Colombiano",
-        "fechaNacimiento": "1927-03-06"
-    }
-}
-###
-
-POST http://localhost:8080/api/libros
-Content-Type: application/json
-
-{
-    "titulo": "Cien Años de Soledad",
-    "isbn": "978-0307474478",
-    "anoPublicacion": 1967,
-    "genero": "NOVELA",
-    "autor": {
-        "idAutor": 1
-    }
-}
-###
-

@@ -14,6 +14,17 @@ POST http://localhost:8080/api/autores
 Content-Type: application/json
 
 {
+    "nombre": "J. R. R. Tolkien",
+    "nacionalidad": "Británico",
+    "fechaNacimiento": "1892-01-03"
+}
+
+###
+
+POST http://localhost:8080/api/autores
+Content-Type: application/json
+
+{
     "nombre": "Gabriel García Márquez",
     "nacionalidad": "Colombiano",
     "fechaNacimiento": "1927-03-06"
