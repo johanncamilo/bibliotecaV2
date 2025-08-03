@@ -9,6 +9,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -41,5 +42,18 @@ public class LibroController {
         LibroDTO insertado = new LibroDTO(libroService.create(libro));
 
         return new ResponseEntity<>(insertado, HttpStatus.CREATED);
+    }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<Libro> updLibro(@PathVariable Integer id, @RequestBody Libro libro) {
+        Optional<Libro> libroExiste = libroService.getById(id);
+
+        if(libroExiste.isEmpty()) { return new ResponseEntity<>(HttpStatus.NOT_FOUND); }
+
+        Libro updated = libroExiste.get();
+        updated.setAnoPublicacion(libro.getAnoPublicacion());
+        updated.setGenero(libro.getGenero());
+        updated.setTitulo(libro.getTitulo());
+        return new ResponseEntity<>(libroService.create(libro), HttpStatus.OK);
     }
 }

@@ -10,6 +10,7 @@ GET http://localhost:8080/api/autores/dto
 
 ###
 
+# CREACION DE AUTORES
 POST http://localhost:8080/api/autores
 Content-Type: application/json
 
@@ -100,6 +101,31 @@ Content-Type: application/json
 
 {
     "nombre": "Elena Poniatowska",
+    "nacionalidad": "Mexicana",
+    "fechaNacimiento": "1932-08-19"
+}
+
+###
+
+POST http://localhost:8080/api/autores
+Content-Type: application/json
+
+{
+    "nombre": "Patito feo",
+    "nacionalidad": "Argentina",
+    "fechaNacimiento": "1932-08-19"
+}
+
+###
+
+# ACTUALIZACION DE AUTORES
+
+###
+PUT http://localhost:8080/api/autores/23
+Content-Type: application/json
+
+{
+    "nombre": "El escritor maldito",
     "nacionalidad": "Mexicana",
     "fechaNacimiento": "1932-08-19"
 }

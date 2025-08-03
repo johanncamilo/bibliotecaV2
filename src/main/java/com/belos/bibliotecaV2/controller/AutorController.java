@@ -9,6 +9,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -41,5 +42,24 @@ public class AutorController {
 
         return new ResponseEntity<>(insertado, HttpStatus.CREATED);
     }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<Autor> updAutor(@PathVariable Integer id, @RequestBody Autor autor) {
+        Optional<Autor> autorExiste = autorService.getById(id);
+
+        /**
+         * !bug_here
+         * está creando actualizando el registro y crea un nuevo registro duplicado con nulos en los campos no definidos
+         */
+        if(autorExiste.isEmpty()) { return new ResponseEntity<>(HttpStatus.NOT_FOUND); }
+
+        Autor updated = autorExiste.get();
+        updated.setNombre(autor.getNombre());
+        updated.setNacionalidad(autor.getNacionalidad());
+        updated.setFechaNacimiento(autor.getFechaNacimiento());
+        return new ResponseEntity<>(autorService.create(updated), HttpStatus.OK);
+
+    }
+
     
 }

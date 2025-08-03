@@ -3,9 +3,10 @@ GET http://localhost:8080/api/libros
 ###
 
 # selecciona libros
-GET http://localhost:8080/api/libros/17
+GET http://localhost:8080/api/libros/24
 ###
 
+# CREACION DE AUTORES
 POST http://localhost:8080/api/libros
 Content-Type: application/json
 
@@ -50,3 +51,28 @@ Content-Type: application/json
 }
 ###
 
+POST http://localhost:8080/api/libros
+Content-Type: application/json
+
+{
+    "titulo": "Burrito de Carga",
+    "isbn": "978-0156628709",
+    "anoPublicacion": 1925,
+    "genero": "NOVELA",
+    "autor": {
+        "id": 23
+    }
+}
+###
+
+# ACTUALIZACION DE AUTORES
+
+###
+PUT http://localhost:8080/api/libros/25
+Content-Type: application/json
+
+{
+    "titulo": "Burrito de Carga Recargado 3",
+    "anoPublicacion": 1925,
+    "genero": "NO_FICCION"
+}
