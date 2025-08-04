@@ -54,6 +54,6 @@ public class LibroController {
         updated.setAnoPublicacion(libro.getAnoPublicacion());
         updated.setGenero(libro.getGenero());
         updated.setTitulo(libro.getTitulo());
-        return new ResponseEntity<>(libroService.create(libro), HttpStatus.OK);
+        return new ResponseEntity<>(libroService.create(updated), HttpStatus.OK);
     }
 }

@@ -72,7 +72,7 @@ PUT http://localhost:8080/api/libros/25
 Content-Type: application/json
 
 {
-    "titulo": "Burrito de Carga Recargado 3",
+    "titulo": "Tripe Mardito",
     "anoPublicacion": 1925,
     "genero": "NO_FICCION"
 }

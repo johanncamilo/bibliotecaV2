@@ -125,7 +125,7 @@ PUT http://localhost:8080/api/autores/23
 Content-Type: application/json
 
 {
-    "nombre": "El escritor maldito",
+    "nombre": "El escritor triple mardito",
     "nacionalidad": "Mexicana",
     "fechaNacimiento": "1932-08-19"
 }

@@ -47,11 +47,7 @@ public class AutorController {
     public ResponseEntity<Autor> updAutor(@PathVariable Integer id, @RequestBody Autor autor) {
         Optional<Autor> autorExiste = autorService.getById(id);
 
-        /**
-         * !bug_here
-         * está creando actualizando el registro y crea un nuevo registro duplicado con nulos en los campos no definidos
-         */
-        if(autorExiste.isEmpty()) { return new ResponseEntity<>(HttpStatus.NOT_FOUND); }
+        if(!autorExiste.isPresent()) { return new ResponseEntity<>(HttpStatus.NOT_FOUND); }
 
         Autor updated = autorExiste.get();
         updated.setNombre(autor.getNombre());
