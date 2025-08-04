@@ -129,3 +129,8 @@ Content-Type: application/json
     "nacionalidad": "Mexicana",
     "fechaNacimiento": "1932-08-19"
 }
+
+###
+# ELIMINACION DE AUTOR
+
+DELETE http://localhost:8080/api/autores/23
